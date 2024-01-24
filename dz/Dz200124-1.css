@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+ol {
+    color: white;
+    background-color: rgb(218, 26, 218);
+    margin: 10px;
+    padding: auto;
+    font-weight: bold;        /* Сделать текст жирным */
+    font-size: 18px;
+}
+
+li {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    margin: 5px 0; /* Объединяем все отступы в одно свойство */
+}
+
+.highlighted {
+    padding: 5px 5px ;             /* Задать отступы слева и справа */
+    background-color: rgb(120, 57, 151); /* Задать цвет выделения (можете указать любой другой цвет) */
+    display: inline;          /* Обеспечить, чтобы блок выделял только слово */
+}
+
+/*margin-left: auto;   /* Автоматический левый внешний отступ */
+/*margin-right: auto;  /* Автоматический правый внешний отступ */
+/*text-decoration:  /* Добавить подчеркивание к тексту */

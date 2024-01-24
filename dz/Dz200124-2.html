@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Dz200124-2.css">
+</head>
+<body>
+    <p>MY To Do List</p> 
+    <div>
+        <ul>
+            <li><!--1-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label">Hit the gym</span>
+                    <!--чекбокс <input type="checkbox"> отмечать или снимать отметку-->
+                    <!--идентификатор id="item1" применение стиля CSS-->
+                    <!--onchange="updateItem(this) обращение к функции(скрипту) передача аргумента отзависимости отметки Checkbox-->
+                    <!--идентификатор id="label" обращение к элементу через JavaScript и стилю в CSS-файле-->
+                </label>
+            </li>
+            
+            <li><!--2-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Pay bills</span>
+                </label>
+            </li>
+            
+            <li><!--3-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Meet John</span>
+                </label>
+            </li>
+
+            <li><!--4-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Buy eggs</span>
+                </label>
+            </li>
+
+            <li><!--5-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Read a book</span>
+                </label>
+            </li>
+            
+            <li><!--6-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Organize office</span>
+                </label>
+            </li>
+
+            <li><!--7-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Eat dinner</span>
+                </label>
+            </li>
+
+            <li><!--8-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Buy apples</span>
+                </label>
+            </li>
+
+            <li><!--9-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Meet George</span>
+                </label>
+            </li>
+
+            <li><!--10-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Feed the cat</span>
+                </label>
+            </li>
+
+            <li><!--11-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Write a letter</span>
+                </label>
+            </li>
+            
+            <li><!--12-->
+                <label>
+                    <input type="checkbox" id="item1" onchange="updateItem(this)"> 
+                    <span id="label1">Run 1 km</span>
+                </label>
+            </li>
+        </ul>
+        <script>
+            function updateItem(checkbox) {
+              //Получает следующий элемент после чекбокса (checkbox) это <span> с текстом "Пункт 1"
+              var label = checkbox.nextElementSibling; 
+              //Получает ближайший родительский элемент <li> в котором содержится чекбокс.
+              var listItem = checkbox.closest('li');
+              //Получает ссылку на элемент с идентификатором 'checklist' в коде не используется
+              var checklist = document.getElementById('checklist');
+
+              if (checkbox.checked) {
+                label.classList.add('checked');
+                listItem.classList.add('checked-list');
+
+                // Добавление изображения
+                var img = document.createElement('img');
+                img.src = 'image.png'; // Замените на путь к вашему изображению
+                //Добавляет созданный <img> как дочерний элемент <span>, что позволяет отображать изображение вместе с текстом
+                label.appendChild(img);
+              } else {
+                label.classList.remove('checked');
+                listItem.classList.remove('checked-list');
+                // Удаление изображения (если необходимо)
+                var img = label.querySelector('img');
+                if (img) {
+                  img.remove();
+                }
+              }
+            }
+          </script>
+    </div>
+</body>
+</html>

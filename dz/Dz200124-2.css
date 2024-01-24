@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 30px;
+}
+p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;       /* Убираем внутренний отступ у списка */
+
+}
+  
+li {
+    margin-right: 55%;
+    padding: 5px 5px;
+    margin-bottom: 0px; /* Задаем отступ между элементами списка */
+    background-color: rgb(45, 155, 240); /* Задать цвет выделения (можете указать любой другой цвет) */
+    font-size: 20px;
+}
+  
+input[type="checkbox"] {
+    margin-right: 5px; /* Расстояние между чекбоксом и текстом */
+    }
+label {
+    display: flex;
+    align-items: center;
+    
+  }
+.checked {
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    }
+.checked-list {
+    background-color: rgb(209, 227, 233); /* Цвет фона для отмеченного списка */
+    size: 10px;
+  }
+
+.checked img {
+    margin-left: 100px;
+    width: 20px; /* Укажите желаемый размер для изображения */
+    height: 20px;
+    }
+    
+#item1 {
+    text-decoration:underline;
+    }
